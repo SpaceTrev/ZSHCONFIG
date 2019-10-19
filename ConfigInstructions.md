@@ -13,8 +13,7 @@
 # enable the default zsh completions!
 `$ code ~/.zshrc`
 # H3 populate ~/.zshrc with
-
-"autoload -Uz compinit && compinit"
+autoload -Uz compinit && compinit
 
 # H3 Go back to ~/.zshrc and fill
 zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
