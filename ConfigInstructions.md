@@ -40,14 +40,113 @@ eval "$(starship init zsh)"
 
 
 # Copy Paste the following in starship.toml or wherever it lives on your machine
+prompt_order = [
+    "username",
+    "hostname",
+    "kubernetes",
+    "directory",
+    "git_branch",
+    "git_state",
+    "git_status",
+    "package",
+    "dotnet",
+    "golang",
+    "java",
+    "nodejs",
+    "python",
+    "ruby",
+    "rust",
+    "nix_shell",
+    "conda",
+    "memory_usage",
+    "aws",
+    "env_var",
+    "cmd_duration",
+    "line_break",
+    "jobs",
+    "battery",
+    "time",
+    "character",
+]
+
+[kubernetes]
+symbol = "⛵ "
+style = "dim green"
+disabled = false
+
+[git_state]
+progress_divider = " of "
+cherry_pick = "🍒 PICKING"
+rebase = "⚾ REBASING"
+disabled = true
+
+[git_status]
+conflicted = " ❌ "
+ahead = " 🏎💨 "
+behind = " 🌤️ "
+diverged = " ↔ "
+untracked = " 🤷‍ "
+stashed = " 📦 "
+modified = " 🍂 "
+staged = " 🕺 "
+renamed = " 👅 "
+deleted = " 🗑 "
+
 [character]
 symbol = "🚀"
 
 [directory]
-fish_style_pwd_dir_length = 10
+fish_style_pwd_dir_length = 11
+style = "fg:white bg:green"
 
 [git_branch]
-symbol = "🕊️ ️ "
+symbol = "🥦  "
+
+[hostname]
+ssh_only = false
+prefix = "⟪"
+suffix = "⟫"
+trim_at = ".local"
+disabled = false
+style= "lightblue"
+
+[jobs]
+symbol = "+ "
+threshold = 1
+disabled = true
+
+[time]
+disabled = false
+format = "⏰ [ %T ]"
+utc_time_offset = -5
+style = " li"
+
+[python]
+symbol = "🐍 "
+pyenv_version_name = true
+pyenv_prefix = "foo "
+disabled = false
+
+[cmd_duration]
+min_time = 2 
+prefix = "time "
+
+[memory_usage]
+show_percentage = true
+show_swap = true
+disabled = false
+threshold = 0
+symbol = "🐏 "
+style = "bold purple"
 
 [package]
 symbol = "🥡 "
+
+[[battery.display]]
+threshold = 100
+style = "bold"
+
+[battery]
+full_symbol = "🔋"
+charging_symbol = "⚡️"
+discharging_symbol = " 💀 "
