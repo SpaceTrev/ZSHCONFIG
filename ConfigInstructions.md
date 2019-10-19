@@ -35,6 +35,7 @@ eval "$(starship init zsh)"
 
 ### download the scripts for completion in that ~./zsh dir
 `$ curl -o git-completion.bash https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash`
+
 `$ curl -o _git https://raw.githubusercontent.com/git/git/master/contrib/completion.zsh`
 
 
