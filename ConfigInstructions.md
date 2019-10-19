@@ -40,13 +40,13 @@ eval "$(starship init zsh)"
 
 # Copy Paste the following in starship.toml or wherever it lives on your machine
 [character]
-symbol = " "
+symbol = "🚀"
 
 [directory]
 fish_style_pwd_dir_length = 10
 
 [git_branch]
-symbol = " ️  "
+symbol = "🕊️ ️ "
 
 [package]
 symbol = "🥡 "
